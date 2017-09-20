@@ -1,22 +1,156 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
-body {
+* {
   font-family: 'Roboto Condensed', sans-serif;
-  }
+  font-size: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9 ;
+}
+
+body{
+  margin-bottom: 1%;
+  background-color: #f9f9f9 ;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px 5px;
+}
+
+.logo-container > img {
+  width: 150px;
+  padding: 10px;
+}
+
+.nav-container {
+  margin: auto;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.nav-profile {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-photo-profil {
+  width: 15%;
+  margin-right: 15px;
+}
+.nav-photo-profil > img {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.nav-user-name {
+  font-size: 1.5rem;
+}
+.nav-status {
+  display: flex;
+}
+
+.nav-status-light {
+  border: 1px solid green;
+  border-radius: 50%;
+  width: 7px;
+  margin: 3px 4px;
+  background-color: green;
+}
+
+.nav-status-pseudo {
+  font-size: 1.2rem;
+}
+
+.nav-bar-wave {
+  width: 100%;
+  height: 5px;
+}
 
 
 .learn{
   display: flex;
-  align-items: center;
-  padding: auto;
+  justify-content:flex-start;
 }
 
+.learn p {
+height: 60px;
+padding-left: 50px;
+text-align: center;
+text-decoration: none;
+font-size: 1.5rem;
+color: #c1c1c1;
+}
 
-h1 {
+.learn p span{
+  font-size: 2rem;
+  width: 90px;
+  color: #192b41;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: none;
   text-align: center;
-  color: gold;
-  padding-top: 25px;
-  font-size: 10rem;
+  text-decoration: none;
+  font-size: 3REM;
+}
+
+#logo {
+  width: 150px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  }
+
+#un{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 3REM;
+}
+
+.row{
+  margin:0px;
+}
+
+.main{
+  display:flex;
+  align-items: center;
+}
+
+.data{
+  position: absolute;
+  z-index: 1;
+  width:135px;
+}
+.data p {
+  font-size: 1.5rem;
+  color: #c1c1c1;
+}
+
+.data p span{
+  font-size: 1.5rem;
+  color: #192b41;
+}
+
+.percentProfit{
+  padding-left: 15px;
+}
+.indic{
+  display: flex;
+  justify-content: center;
+}
+
+.indic2{
+  display:flex;
 }
 
 #chart_div {
@@ -25,68 +159,66 @@ h1 {
   height: 500px;
 }
 
+.but{
+    align-content: flex-end;
+    padding-top: 1%;
+}
 
 .buy {
-    width: 20%;
-    background-color: rgb(68, 199, 103);
-    border-radius: 13px;
-    border: 3px solid rgb(24, 171, 41);
-    display: inline-block;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-family: Arial;
-    font-size: 17px;
-    padding-top: 1%;
-    padding-bottom: 1% ;
-    text-decoration: none;
-    text-shadow: rgb(32, 163, 12) 0px -1px 0px;
+      height: 50px;
+      width:100px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 3REM;
+      border-radius: 5px;
+      box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 }
 
-.Short {
-    width: 20%;
+
+.short {
+    height: 50px;
+    width:100px;
     background-color: #ff0000;
-    border-radius: 13px;
-    border: 3px solid #cc0000;
-    display: inline-block;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-family: Arial;
-    font-size: 17px;
-    padding-top: 1%;
-    padding-bottom: 1% ;
+    border: none;
+    color: white;
+    text-align: center;
     text-decoration: none;
-    text-shadow: rgb(32, 163, 12) 0px -1px 0px;
+    font-size: 3REM;
+    border-radius: 5px;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
 }
 
-.Sell {
-    width: 20%;
-    background-color: #ff0000;
-    border-radius: 13px;
-    border: 3px solid #cc0000;
-    display: inline-block;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-family: Arial;
-    font-size: 17px;
-    padding: 24px 50px;
-    text-decoration: none;
-    text-shadow: rgb(32, 163, 12) 0px -1px 0px;
-    display:none;
-}
-
-
-.Cover{
-  width: 20%;
-  background-color: rgb(68, 199, 103);
-  border-radius: 13px;
-  border: 3px solid rgb(24, 171, 41);
-  display: inline-block;
-  cursor: pointer;
-  color: rgb(255, 255, 255);
-  font-family: Arial;
-  font-size: 17px;
-  padding: 24px 50px;
+.sell {
+  padding-left: 10%;
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 25px;
+  text-align: center;
   text-decoration: none;
-  text-shadow: rgb(32, 163, 12) 0px -1px 0px;
+  font-size: 3REM;
+  border-radius: 5px;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
+  display:none;
+}
+
+
+.cover{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding:  25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 3REM;
+  border-radius: 5px;
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7),
+            -1px 2px 20px rgba(255, 255, 255, 0.6) inset;
   display:none;
 }

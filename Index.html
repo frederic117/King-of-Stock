@@ -1,57 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <title>King of Stocks</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-  <script src=""></script>
+
 </head>
 <body>
-  <div class= "container">
+  <nav class="nav-bar">
+        <div class="logo-container">
+         <img src="img/logo.png" alt="logo-insider">
+       </div>
+        <div class="nav-container">
+          <h1>Warm-up - King of Stocks</h1>
+        </div>
+        <div class="nav-profile">
+          <div class="nav-photo-profil">
+            <img src="img/avatar.png" alt="">
+          </div>
+          <div class="nav-user-profile">
+            <div id ="userName" class="nav-user-name">Frederic Magnin</div>
+          <div class="nav-status">
+            <div class="nav-status-light"></div>
+            <div class="nav-status-pseudo">@Fred</div>
+          </div>
+        </div>
+      </nav>
+      <img class="nav-bar-wave" src="img/nav-bar-wave.png" alt="">
 
-    <h1>King of Stocks</h1>
-    <div class="learn"><h2> Learn with</h2> <img src="img/nokia-logo.jpg" alt="nokia"></div>
 
 
-<div id="chart_div"></div>
+    <div class="learn">
+  <div>
+      <p>Learn with</br>
+      <img id='logo' src="img/nokia.png" alt="nokia"></p>
+</div>
+<div>
+  <p class="price"> Current Price:</br>
+    <span class="curentPrice" id="un"></span>
+</div>
+<p class="cash"> Cash:</br>
+  <span></span>
+</p>
+  <div class= "indic">
+    <p class="position"> Position:</br>
+      <span></span>
+    </p>
+    <p class="stockBuyingValue">Buying Value:</br>
+      <span></span>
+    </p>
+    <p class= "numberOfStockInPortfolio">Quantity:</br>
+      <span></span>
+    </p>
+    <div class= "indic2">
+        <p class="portfolioValue"> Portfolio Value:</br>
+          <span></span>
+        </p>
+        <p class="positionValue"> Position Value:</br>
+          <span></span>
+        </p>
+        <p class="portfolioProfit"> Portfolio Profit:</br>
+          <span></span><span class="percentProfit"></span>
+        </p>
+      </div>
+    </div>
+    <section class='but'>
+      <button type="button" class ="buy">
+        Buy
+      </button>
+      <button type="button" class ="sell">
+        Sell
+      </button>
 
-<section>
-  <p class="stockBuyingValue"> Stock Buying Value:
-    <span></span>
-  </p>
-  <p class= "portfolioValue"> Portfolio Value:
-    <span></span>
-  </p>
-  <p class="positionValue"> Position Value:
-    <span></span>
-  </p>
-  <p class="portfolioProfit"> portfolio Profit:
-    <span></span>
-  </p>
+      <button type="button" class ="short">
+        Short
+      </button>
+      <button type="button" class ="cover">
+        Cover
+      </button>
+    </section>
+</div>
 
-  <button type="button" class ="buy">
-    Buy
-  </button>
-  <button type="button" class ="Sell">
-    Sell
-  </button>
+<div class ='row' id="chart_div"></div>
+</div>
 
-  <button type="button" class ="Short">
-    Short
-  </button>
-  <button type="button" class ="Cover">
-    Cover
-  </button>
 
-</section>
 </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="board.js"></script>
 <script type="text/javascript" src="logic.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
