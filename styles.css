@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   padding: 10px 30px 5px;
+  margin-bottom: 5px;
 }
 
 .logo-container > img {
@@ -78,12 +79,17 @@ h1 {
 
 .learn {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   width: 100%;
 }
 
+#un {
+  padding-left: 0px;
+}
+#log {
+  padding-left: 0px;
+}
 .learn p {
-  display: inline;
   padding-left: 50px;
   text-align: center;
   text-decoration: none;
@@ -92,7 +98,7 @@ h1 {
 }
 
 .learn p span {
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   width: 90px;
   color: #192b41;
   margin-top: 20px;
@@ -110,21 +116,6 @@ h1 {
   padding-top: 10px;
 }
 
-#un {
-  font-size: 1.3vw;
-  width: 90px;
-  color: #192b41;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  padding-left: 60px;
-}
-.cash span {
-  padding-left: 45px;
-}
 .row {
   margin: 0px;
 }
@@ -155,10 +146,8 @@ h1 {
 
 .but {
   display: flex;
-  justify-content: flex-end;
   padding-top: 1%;
   padding-bottom: 1%;
-  padding-left: 13%;
 }
 
 .buy {
@@ -230,6 +219,10 @@ h1 {
 }
 .flip-clock-label {
   display: none;
+}
+
+.flip-clock-wrapper {
+  width: 60%;
 }
 
 @media (min-width: 1200px) {
@@ -337,7 +330,7 @@ h1 {
 }
 form {
   margin-top: 60px;
-  margin-left: 700px;
+  padding-left: 40%;
 }
 
 label,

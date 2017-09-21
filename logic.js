@@ -1,5 +1,5 @@
 function Player() {
-  this.cash = 10000;
+  this.cash = 1000;
   this.position = ""; //short or long
   this.buyingPortfolioValue = 0;
   this.portfolioValue = 0;
@@ -10,6 +10,8 @@ function Player() {
   this.portfolioProfit = 0;
   this.stockSellingValue = 0;
   this.started = false;
+  this.profit = 0;
+  this.profitPourcent = 0;
 }
 
 Player.prototype.buy = function() {
@@ -69,4 +71,12 @@ Player.prototype.getPortfolioProfit = function() {
   return this.portfolioProfit;
 };
 
-Player.prototype.gameOver = function() {};
+Player.prototype.gameOver = function() {
+  if (this.portfolioValue === 0) {
+    this.profit = this.portfolioProfit - 1000;
+  } else {
+    this.profit = this.portfolioValue - 1000;
+  }
+  this.profitPourcent = this.profit * 100 / 1000;
+  return this.profit;
+};
