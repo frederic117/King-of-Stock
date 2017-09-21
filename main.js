@@ -10,6 +10,14 @@ $(document).ready(function() {
     $(".game").show();
   });
 
+  $(".fab2").click(function() {
+    timer = timer + 1000;
+  });
+
+  $(".fab").click(function() {
+    timer = timer - 1000;
+  });
+
   var clock = $(".your-clock").FlipClock(180, {
     countdown: true,
     clockFace: "MinuteCounter",
@@ -58,7 +66,7 @@ $(document).ready(function() {
     $(".numberOfStockInPortfolio span").text(
       " " + Math.floor(player.numberOfStockInPortfolio)
     );
-    setInterval(updateValues, 2000);
+    setInterval(updateValues, timer);
   });
 
   $(".sell").click(function() {
@@ -98,7 +106,7 @@ $(document).ready(function() {
     $(".numberOfStockInPortfolio span").text(
       " " + Math.floor(player.numberOfStockInPortfolio)
     );
-    setInterval(updateValues, 2000);
+    setInterval(updateValues, timer);
   });
 
   $(".cover").click(function() {

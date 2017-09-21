@@ -321,7 +321,7 @@ var nokia = [
 
 var currentIndex = 30;
 var data = nokia.slice(0, currentIndex);
-
+var timer = 2000;
 /*var random= Math.floor(Math.random())* rowData.length/2;
 var rowDataSample= rowData.slice(random, random + 75);
 console.log(rowDataSample);*/
@@ -331,7 +331,7 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
   var interval = setInterval(function() {
     //drawNextStep();
-  }, 2000);
+  }, timer);
 }
 
 function drawNextStep() {
