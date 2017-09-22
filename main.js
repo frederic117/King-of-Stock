@@ -1,5 +1,4 @@
 var player;
-
 $(document).ready(function() {
   player = new Player();
   $('select[name="Stocks"]').change(function() {
