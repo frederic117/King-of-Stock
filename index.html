@@ -12,8 +12,7 @@
 </head>
 
 <body>
-<div class="game">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">
+  <nav class="mainHeader navbar navbar-expand-lg navbar-light bg-light nav-bar">
         <div class="logo-container">
               <img src="img/logo.png" alt="logo-insider">
           </div>
@@ -22,13 +21,13 @@
           </div>
           <div class="nav-profile">
               <div class="nav-photo-profil">
-                  <img id="profile-pic" src="img/avatar.png" alt="">
+                  <img class="profile-pic" src="img/avatar.png" alt="">
               </div>
               <div class="nav-user-profile">
-                  <div id="name" class="nav-user-name">Georges Soros</div>
+                  <div class="fullName" class="nav-user-name">Georges Soros</div>
                   <div class="nav-status">
                       <div class="nav-status-light"></div>
-                      <div id="username" class="nav-status-pseudo">@Georges</div>
+                      <div class="pseudo" class="nav-status-pseudo">@Georges</div>
                   </div>
               </div>
           </div>
@@ -36,13 +35,13 @@
       <img class="nav-bar-wave" src="img/nav-bar-wave.png" alt="">
 
 
-
+<div class="game">
       <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar learn">
-                  <div  class="nav-item">
-                      <p id='log'>Learn with</br>
-                      <span><img id='logo' src="img/nokia.png" alt="nokia"></span>
-                      </p>
-                  </div >
+        <div  class="nav-item">
+               <p id='log'>Learn with</br>
+               <span><img id='logo' src="img/nokia.png" alt="nokia"></span>
+               </p>
+           </div >
                   <div  class="nav-item">
                       <p class="price"> Current Price:</br>
                             <span class="curentPrice" id="un"></span>
@@ -88,9 +87,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar">
 <div class="timer">
   <p> Speed </p>
-<div class="timer2"><div class="fab"> - </div></div>
-<div class="fab2"> + </div>
+<div class="timer2">
+  <div class="fab"> - </div></div>
+  <div class="fab2"> + </div>
 </div>
+
 <div class="your-clock"></div>
 <section class='but'>
     <div class="buy2">
@@ -123,9 +124,10 @@
                 </div>
                 <div class="register">
                   <h2 id="title-screen-log">Learn how to anticipate stock movements </h2>
-                  <form action="">
+                  <form class="firstForm" action="">
                     <div class="formul">
                       <label for="name">Name: </label>
+                      &emsp; &nbsp; &nbsp;
                       <input type="text" id="name" name="name" placeholder="Your full name" required>
                     </div>
                     <div class="formul">
@@ -137,6 +139,17 @@
                       <input type="file" onchange="uploadPic()" id="pic" name="pictureToUpload">
                     </div>
                   </form>
+                    <form method="post" action="">
+                      <label for="stock">Learn with: </label>
+                        <span>
+                            <select name="Stocks">
+                              <option value="">-Choose your Stock</option>
+                              <option value="nokia">Nokia</option>
+                              <option value="adidas">Adidas</option>
+                            </select>
+                        </span>
+                      </form>
+
                   <button id="startGame">Start</button>
                 </div>
                 <div class="marketing">
@@ -165,7 +178,19 @@
 
 <!--leaderboard game over-->
       <div class="leaderboard">
-        <h1> Greatest trader on a quarter</h1>
+                  <div class="item ">
+                   <div class="rank" style="min-width:30px"></div>
+                   <div class="content">
+                       <a class="avatar default">
+                           <img class="profile-pic" src="img/avatar.png" alt=""></a>
+                      <div class= "rankInfo">
+                        <a class ="fullName name">Georges Soros</a>
+                        <div class=" points profit"> erf </div>
+                        <div class="points profitPourcent"> ezf </div>
+                    </div>
+                   </div>
+               </div>
+        <h1> Greatest & Worst trader in history</h1>
 
                       <div class="item ">
                            <div class="rank" style="min-width:30px">1</div>
@@ -287,6 +312,7 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://use.fontawesome.com/1567934e6f.js"></script>
     <script type="text/javascript" src="lib/flipclock.min.js"></script>
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript" src="board.js"></script>
     <script type="text/javascript" src="logic.js"></script>
     <script type="text/javascript" src="main.js"></script>

@@ -1,21 +1,33 @@
 var player;
 
 $(document).ready(function() {
+  player = new Player();
+  $('select[name="Stocks"]').change(function() {
+    player.stock = stockData[$(this).val()];
+  });
+
+  //changeStock();
   $("#screen-log-in").show();
   $(".game").hide();
+  $(".mainHeader").hide();
+
   $("#startGame").click(function() {
-    $("#fullName").text($("#name").val());
-    $("#pseudo").text($("#username").val());
+    changeStock();
+    setTimeout(intervalUpdate, timer);
+
+    $(".fullName").text($("#name").val());
+    $(".pseudo").text($("#username").val());
     $("#screen-log-in").hide();
     $(".game").show();
+    $(".mainHeader").show();
   });
 
   $(".fab2").click(function() {
-    timer = timer + 1000;
+    timer = timer / 1.2;
   });
 
   $(".fab").click(function() {
-    timer = timer - 1000;
+    timer = timer * 1.2;
   });
 
   var clock = $(".your-clock").FlipClock(180, {
@@ -25,24 +37,16 @@ $(document).ready(function() {
     callbacks: {
       stop: function() {
         $(".game").hide();
+        $(".mainHeader").show();
         $(".leaderboard").show();
       }
       //interval: doStuff
     }
   });
 
-  var inter1 = setInterval(function() {
-    if (currentIndex > nokia.length) {
-      clearInterval(inter1);
-    }
-    drawNextStep();
-    updateUn();
-  }, 2000);
-
   $(".indic").hide();
   $(".indic2").hide();
 
-  player = new Player();
   $(".cash span").text(" " + player.cash + " €");
 
   $(".buy").click(function() {
@@ -66,7 +70,6 @@ $(document).ready(function() {
     $(".numberOfStockInPortfolio span").text(
       " " + Math.floor(player.numberOfStockInPortfolio)
     );
-    setInterval(updateValues, timer);
   });
 
   $(".sell").click(function() {
@@ -106,7 +109,6 @@ $(document).ready(function() {
     $(".numberOfStockInPortfolio span").text(
       " " + Math.floor(player.numberOfStockInPortfolio)
     );
-    setInterval(updateValues, timer);
   });
 
   $(".cover").click(function() {
@@ -124,6 +126,15 @@ $(document).ready(function() {
     $(".indic").hide();
   });
 });
+
+function intervalUpdate() {
+  if (currentIndex <= player.stock.length) {
+    drawNextStep();
+    updateUn();
+    updateValues();
+    setTimeout(intervalUpdate, timer);
+  }
+}
 
 function updateValues() {
   player.getPositionValue();
@@ -152,7 +163,7 @@ function uploadPic() {
   var file = $("#pic")[0].files[0];
   var reader = new FileReader();
   reader.onload = function(e) {
-    $("#profile-pic").attr("src", e.target.result);
+    $(".profile-pic").attr("src", e.target.result);
   };
   reader.readAsDataURL(file);
 }

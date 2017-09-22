@@ -12,7 +12,23 @@ function Player() {
   this.started = false;
   this.profit = 0;
   this.profitPourcent = 0;
+  this.stock = "";
 }
+
+Player.prototype.maxValue = function(startIndex, endIndex) {
+  var period = this.stock.slice(startIndex, endIndex);
+  var rateOnPeriod = [];
+  var futureValue = 1;
+  for (var i = 1; i < period.length; i++) {
+    rateOnPeriod.push(Math.abs(period[i][2] / period[i - 1][2] - 1));
+    // futureValue = 1 * (Math.pow(1 + monthlyRate, months) - 1) / monthlyRate;
+  }
+  console.log(rateOnPeriod);
+  for (var j = 0; j < rateOnPeriod.length; j++) {
+    futureValue *= 1 + rateOnPeriod[j];
+  }
+  return futureValue;
+};
 
 Player.prototype.buy = function() {
   this.stockBuyingValue = data[data.length - 1][2];
