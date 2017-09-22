@@ -461,7 +461,7 @@ input {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   #logo {
     width: 75px;
     padding-left: 2px;
