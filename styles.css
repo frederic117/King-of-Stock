@@ -225,12 +225,6 @@ h1 {
   width: 60%;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 100%;
-  }
-}
-
 .leaderboard {
   display: none;
   position: absolute;
@@ -418,6 +412,7 @@ input {
   margin: 0;
   padding-right: 5%;
   padding-top: 5%;
+  color: #c1c1c1;
 }
 .timer2 {
   padding-right: 5%;
@@ -458,4 +453,32 @@ input {
 .fab2:hover {
   box-shadow: 0 6px 14px 0 #666;
   transform: scale(1.05);
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  #logo {
+    width: 75px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 5px;
+  }
+  .learn p {
+    padding-left: 5px;
+  }
+  .flip-clock-wrapper {
+    width: 30%;
+  }
+  .your-clock {
+    padding-left: 5%;
+  }
+  form {
+    margin-top: 30px;
+    padding-left: 20%;
+  }
 }
