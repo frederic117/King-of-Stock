@@ -17,6 +17,12 @@ body {
   margin-bottom: 5px;
 }
 
+#lo {
+  width: 10%;
+}
+#logo {
+  width: 100%;
+}
 .logo-container > img {
   width: 150px;
   padding: 10px;

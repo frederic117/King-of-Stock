@@ -4034,3 +4034,8 @@ var stockData = {
   nokia: nokia,
   adidas: adidas
 };
+
+var imageStock = {
+  nokia: "img/nokia.png",
+  adidas: "img/adidas.png"
+};

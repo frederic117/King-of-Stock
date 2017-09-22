@@ -1,10 +1,11 @@
 var timer = 2000;
 var currentIndex = 30;
 var data;
+
 function changeStock() {
   data = player.stock.slice(0, currentIndex);
   console.log("data", data);
-  /*var random= Math.floor(Math.random())* rowData.length/2;
+  /*var random= Math.floor(Math.random()* rowData.length)/2;
   var rowDataSample= rowData.slice(random, random + 75);
   console.log(rowDataSample);*/
 

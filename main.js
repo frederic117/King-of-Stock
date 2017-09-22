@@ -3,7 +3,10 @@ var player;
 $(document).ready(function() {
   player = new Player();
   $('select[name="Stocks"]').change(function() {
+    var stockName = $(this).val();
+    console.log(stockName);
     player.stock = stockData[$(this).val()];
+    $("#logo").attr("src", imageStock[stockName]);
   });
 
   //changeStock();
