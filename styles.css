@@ -225,11 +225,6 @@ header.masthead .intro-text .skills {
   font-weight: 300;
 }
 
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 200px;
-    padding-bottom: 100px;
-  }
   header.masthead .intro-text .name {
     font-size: 4.75em;
   }
@@ -288,6 +283,8 @@ header.masthead .intro-text .skills {
 
 #portfolio * {
   z-index: 2;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 767px) {
@@ -605,6 +602,7 @@ body {
   margin-bottom: 5px;
 }
 
+
 #lo {
   width: 10%;
 }
@@ -914,10 +912,16 @@ h1 {
   background-color: #f9f9f9;
 }
 
+#portfolio label {
+  font-size: 2vw;
+}
+#portfolio span{
+  font-size: 1.5vw;
+}
 label,
 input {
   margin-right: 20px;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 form {
@@ -947,11 +951,12 @@ form {
 }
 
 #startGame {
-  margin-top: 70px;
+  margin-top: 5%;
+  margin-bottom: 10%;
   box-shadow: 0 1px 1px #33333d;
   border-radius: 5px;
   width: 150px;
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: 400;
   color: #f9f9f9;
   background-image: -webkit-linear-gradient(#40404b, #373744);
@@ -1082,5 +1087,6 @@ form {
   form {
     margin-top: 30px;
     padding-left: 5px;
+    font-size: 5vw;
   }
 }
